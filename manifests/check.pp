@@ -6,7 +6,7 @@ define nagios::check (
   $executable,
 #  $parameters          = hiera("nagios::check::${title}::parameters", undef),
   $description         = hiera("nagios::check::${title}::description", $title),
-  $nrpe_options        = hiera("nagios::check::${title}::nrpe_options", '-t 15'),
+  $nrpe_options        = hiera("nagios::check::${title}::nrpe_options", '-t 30'),
   $ensure              = hiera("nagios::check::${title}::ensure", 'present'),
 #  $servicegroups       = hiera("nagios::check::${title}::description",[]),
   $check_period        = hiera("nagios::check::${title}::check_period",undef),
